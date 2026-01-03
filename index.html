@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sefer Kerem Özmen | Sistem Mimarı</title>
+    <meta name="description" content="Excellence by System, Integrity by Identity. Sefer Kerem Özmen Kişisel Marka Sitesi.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        anthracite: '#121212',
+                        ivory: '#FDFCF0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #FDFCF0;
+            overflow-x: hidden;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Asymmetric Shape for Hero Image */
+        .hero-shape {
+            border-radius: 2rem;
+        }
+        @media (min-width: 1024px) {
+            .hero-shape {
+                border-radius: 2rem 10rem 2rem 5rem;
+            }
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            background-color: rgba(18, 18, 18, 0.85);
+        }
+
+        .selection-ivory::selection {
+            background: #FDFCF0;
+            color: #121212;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="selection-ivory">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-8">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="font-serif text-2xl tracking-tight italic">
+                SKÖ
+            </div>
+            <div class="hidden md:flex space-x-12 text-sm uppercase tracking-widest font-light opacity-80">
+                <a href="#principles" class="hover:opacity-100 transition-opacity">İlkeler</a>
+                <a href="#ecosystem" class="hover:opacity-100 transition-opacity">Ekosistem</a>
+                <a href="#partners" class="hover:opacity-100 transition-opacity">İş Birliği</a>
+                <a href="#contact" class="hover:opacity-100 transition-opacity">İletişim</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-xs uppercase tracking-widest">Menu</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center pt-20 overflow-hidden px-6">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="lg:col-span-7 z-10 reveal">
+                    <span class="inline-block px-4 py-1 border border-gray-700 rounded-full text-[10px] md:text-xs uppercase tracking-[0.3em] mb-8 text-gray-400">
+                        Sistem Mimarı & Stratejist
+                    </span>
+                    <h1 class="font-serif text-5xl md:text-8xl lg:text-[100px] leading-[1.1] mb-6 tracking-tighter">
+                        Sefer Kerem <br />
+                        <span class="italic text-gray-400">Özmen</span>
+                    </h1>
+                    <p class="text-lg md:text-2xl font-light max-w-xl text-gray-300 leading-relaxed mb-10">
+                        Sektör ne olursa olsun, bir işin en doğru ve en sürdürülebilir usulü neyse, onu biz uygularız.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <div class="h-[1px] w-24 bg-gray-500 self-center hidden sm:block"></div>
+                        <span class="font-serif text-lg italic opacity-70">
+                            "Excellence by System, Integrity by Identity"
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Photo Placeholder Area -->
+                <div class="lg:col-span-5 relative reveal" style="transition-delay: 0.2s;">
+                    <div class="relative aspect-[4/5] w-full max-w-md mx-auto">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-800 to-gray-600 hero-shape overflow-hidden border border-white/10 shadow-2xl transition-transform duration-700 hover:scale-[1.02]">
+                            <img 
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" 
+                                alt="Sefer Kerem Özmen" 
+                                class="w-full h-full object-cover opacity-50 mix-blend-luminosity"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#121212]/80 to-transparent"></div>
+                        </div>
+                        <!-- Decorative Elements -->
+                        <div class="absolute -top-4 -right-4 w-24 h-24 border-t border-r border-gray-600 rounded-tr-3xl hidden lg:block"></div>
+                        <div class="absolute -bottom-4 -left-4 w-24 h-24 border-b border-l border-gray-600 rounded-bl-3xl hidden lg:block"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Background Decorative Text -->
+            <div class="absolute bottom-10 left-10 pointer-events-none opacity-[0.03] select-none hidden lg:block">
+                <span class="text-[200px] font-serif font-bold whitespace-nowrap leading-none">SYSTEM ARCHITECT</span>
+            </div>
+        </section>
+
+        <!-- Principles Section -->
+        <section id="principles" class="py-32 bg-[#181818] px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                    <div class="lg:col-span-5 reveal">
+                        <h2 class="font-serif text-4xl md:text-5xl mb-8 leading-tight">
+                            Çalışma İlkelerimiz & <br /> <span class="italic text-gray-400">Vizyoner Yaklaşım</span>
+                        </h2>
+                        <p class="text-gray-400 font-light text-lg max-w-md">
+                            Başarının bir tesadüf değil, doğru kurgulanmış bir sistemin sonucu olduğuna inanıyoruz. Bu inançla, her adımda mükemmeliyeti hedefleyen bir yol haritası izliyoruz.
+                        </p>
+                    </div>
+                    
+                    <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+                        <div class="group reveal">
+                            <div class="w-12 h-[1px] bg-gray-600 mb-6 group-hover:w-20 transition-all duration-500"></div>
+                            <h3 class="text-xl font-medium mb-4 tracking-wide">Yüksek Standart Disiplini</h3>
+                            <p class="text-gray-400 font-light leading-relaxed">
+                                Her projede geçici çözümler yerine, en iyisini inşa etme disipliniyle hareket ediyoruz. Standartlarımız esnemez, gelişir.
+                            </p>
+                        </div>
+                        <div class="group reveal">
+                            <div class="w-12 h-[1px] bg-gray-600 mb-6 group-hover:w-20 transition-all duration-500"></div>
+                            <h3 class="text-xl font-medium mb-4 tracking-wide">Sürdürülebilir Mimari</h3>
+                            <p class="text-gray-400 font-light leading-relaxed">
+                                Sistemlerimiz sadece bugünü değil, gelecekteki ölçeklenebilirliği ve operasyonel verimliliği merkezine alır.
+                            </p>
+                        </div>
+                        <div class="group reveal">
+                            <div class="w-12 h-[1px] bg-gray-600 mb-6 group-hover:w-20 transition-all duration-500"></div>
+                            <h3 class="text-xl font-medium mb-4 tracking-wide">Kimlikte Dürüstlük</h3>
+                            <p class="text-gray-400 font-light leading-relaxed">
+                                Yaptığımız iş, kimliğimizin bir yansımasıdır. Şeffaflık ve etik değerler, her stratejimizin temel taşıdır.
+                            </p>
+                        </div>
+                        <div class="group reveal">
+                            <div class="w-12 h-[1px] bg-gray-600 mb-6 group-hover:w-20 transition-all duration-500"></div>
+                            <h3 class="text-xl font-medium mb-4 tracking-wide">Seçici Profesyonellik</h3>
+                            <p class="text-gray-400 font-light leading-relaxed">
+                                Nicelikten ziyade niteliğe odaklanarak, vizyonumuza eşlik edebilecek derinlikteki projelere odaklanıyoruz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecosystem Section -->
+        <section id="ecosystem" class="py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="font-serif text-4xl md:text-5xl mb-4 italic">Ekosistem</h2>
+                    <div class="h-px w-20 bg-gray-700 mx-auto"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="group relative bg-[#1A1A1A] p-12 border border-white/5 rounded-2xl hover:bg-[#1E1E1E] transition-all duration-500 cursor-default overflow-hidden reveal">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-700 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
+                        <span class="block text-[10px] uppercase tracking-[0.3em] text-gray-500 mb-6 group-hover:text-gray-300 transition-colors">İnşaat Teknolojileri</span>
+                        <h3 class="font-serif text-3xl mb-6 group-hover:translate-x-2 transition-transform duration-500">Yapımax</h3>
+                        <p class="text-gray-400 font-light leading-relaxed mb-8">Modern şantiye yönetimi ve dijital hakediş süreçlerinde sektörel dönüşümün öncüsü.</p>
+                        <div class="flex items-center text-xs uppercase tracking-widest font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">Detayları İncele <span class="ml-2">→</span></div>
+                    </div>
+
+                    <div class="group relative bg-[#1A1A1A] p-12 border border-white/5 rounded-2xl hover:bg-[#1E1E1E] transition-all duration-500 cursor-default overflow-hidden reveal" style="transition-delay: 0.1s;">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-700 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
+                        <span class="block text-[10px] uppercase tracking-[0.3em] text-gray-500 mb-6 group-hover:text-gray-300 transition-colors">Stratejik Yatırım</span>
+                        <h3 class="font-serif text-3xl mb-6 group-hover:translate-x-2 transition-transform duration-500">Gayrimenkul</h3>
+                        <p class="text-gray-400 font-light leading-relaxed mb-8">Klasik emlak anlayışının ötesinde, veri odaklı ve değer bazlı mülk yönetimi sistemleri.</p>
+                        <div class="flex items-center text-xs uppercase tracking-widest font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">Detayları İncele <span class="ml-2">→</span></div>
+                    </div>
+
+                    <div class="group relative bg-[#1A1A1A] p-12 border border-white/5 rounded-2xl hover:bg-[#1E1E1E] transition-all duration-500 cursor-default overflow-hidden reveal" style="transition-delay: 0.2s;">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-700 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></div>
+                        <span class="block text-[10px] uppercase tracking-[0.3em] text-gray-500 mb-6 group-hover:text-gray-300 transition-colors">Yazılım Çözümleri</span>
+                        <h3 class="font-serif text-3xl mb-6 group-hover:translate-x-2 transition-transform duration-500">SaaS</h3>
+                        <p class="text-gray-400 font-light leading-relaxed mb-8">Karmaşık iş süreçlerini yalınlaştıran, kullanıcı deneyimi odaklı ölçeklenebilir platformlar.</p>
+                        <div class="flex items-center text-xs uppercase tracking-widest font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">Detayları İncele <span class="ml-2">→</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section id="partners" class="py-32 bg-[#121212] px-6">
+            <div class="max-w-7xl mx-auto border-t border-gray-800 pt-32">
+                <div class="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20 reveal">
+                    <div class="max-w-2xl">
+                        <h2 class="font-serif text-4xl md:text-6xl mb-8">
+                            Birlikte Değer Yarattığımız <span class="italic">Profiller</span>
+                        </h2>
+                        <p class="text-xl font-light text-gray-400 leading-relaxed">
+                            Bizimle çalışan paydaşlar, sadece bir hizmet almazlar; vizyonlarını somut ve ölçeklenebilir sistemlere dönüştürecek stratejik bir yol arkadaşı edinirler.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div class="flex flex-col reveal">
+                        <span class="text-gray-600 font-serif italic text-2xl mb-4">01</span>
+                        <h4 class="text-lg font-medium mb-3 text-ivory">Sistem Arayanlar</h4>
+                        <p class="text-sm text-gray-500 font-light leading-relaxed">Kaosu düzene dönüştürmek isteyen, sürdürülebilir büyüme odaklı yapılar.</p>
+                    </div>
+                    <div class="flex flex-col reveal" style="transition-delay: 0.1s;">
+                        <span class="text-gray-600 font-serif italic text-2xl mb-4">02</span>
+                        <h4 class="text-lg font-medium mb-3 text-ivory">Vizyonerler</h4>
+                        <p class="text-sm text-gray-500 font-light leading-relaxed">Geleceği bugünden kurgulayan, yenilikçi ve cesur proje sahipleri.</p>
+                    </div>
+                    <div class="flex flex-col reveal" style="transition-delay: 0.2s;">
+                        <span class="text-gray-600 font-serif italic text-2xl mb-4">03</span>
+                        <h4 class="text-lg font-medium mb-3 text-ivory">Etik Odaklılar</h4>
+                        <p class="text-sm text-gray-500 font-light leading-relaxed">Dürüstlüğü başarının ön şartı olarak kabul eden şeffaf paydaşlar.</p>
+                    </div>
+                    <div class="flex flex-col reveal" style="transition-delay: 0.3s;">
+                        <span class="text-gray-600 font-serif italic text-2xl mb-4">04</span>
+                        <h4 class="text-lg font-medium mb-3 text-ivory">Profesyonel İş Ortakları</h4>
+                        <p class="text-sm text-gray-500 font-light leading-relaxed">Karşılıklı değer üretimine ve uzun vadeli güvene inanan organizasyonlar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-20 px-6 bg-[#0D0D0D] border-t border-white/5">
+        <div class="max-w-7xl mx-auto text-center reveal">
+            <h2 class="font-serif text-3xl md:text-5xl mb-12 tracking-tight">
+                Yeni bir sistem inşa etmeye <span class="italic">hazır mısınız?</span>
+            </h2>
+            
+            <a 
+                href="mailto:contact@seferkerem.com" 
+                class="inline-block text-xl md:text-3xl font-light border-b border-gray-700 pb-2 mb-20 hover:text-gray-400 hover:border-gray-500 transition-all duration-300"
+            >
+                hello@seferkerem.com
+            </a>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-600 text-[10px] uppercase tracking-[0.4em]">
+                <div class="mb-4 md:mb-0">
+                    © 2024 SEFER KEREM ÖZMEN. ALL RIGHTS RESERVED.
+                </div>
+                <div class="flex space-x-12">
+                    <a href="#" class="hover:text-ivory transition-colors">LinkedIn</a>
+                    <a href="#" class="hover:text-ivory transition-colors">Twitter (X)</a>
+                    <a href="#" class="hover:text-ivory transition-colors">Instagram</a>
+                </div>
+                <div class="mt-4 md:mt-0 italic font-serif normal-case tracking-normal opacity-50">
+                    Excellence by System
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar Scrolled Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-blur', 'py-4');
+                navbar.classList.remove('py-8');
+            } else {
+                navbar.classList.remove('nav-blur', 'py-4');
+                navbar.classList.add('py-8');
+            }
+        });
+
+        // Reveal Animations on Scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Simple Mobile Menu (Placeholder)
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            alert('Navigasyon Menüsü Yakında Aktif Olacak.');
+        });
+    </script>
+</body>
+</html>
