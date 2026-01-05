@@ -1,49 +1,60 @@
-<style>
-    body {
-        background-color: #000;
-        color: #f5f5f7;
-        margin: 0;
-        /* Sizin şeffaf görseliniz buraya gelecek */
-        background-image: url('sefer-arka-plan.png'); 
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        opacity: 1; /* Body opaklığı tam olmalı */
-    }
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Danışman | Sefer Kerem Özmen Ekosistemi</title>
 
-    /* Arka planı şeffaflaştırmak için overlay katmanı */
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0; left: 0; width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.85); /* Sizin görselinizi %85 siyahla örter, sadece %15 şeffaflık bırakır */
-        z-index: -1;
-    }
+  <!-- Ortak QR stilleri -->
+  <link rel="stylesheet" href="/assets/qr-pages.css" />
+</head>
 
-    .content-area {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 50px 20px;
-    }
+<body>
+  <!-- Founder Watermark Layer -->
+  <div class="founder-wm" aria-hidden="true"></div>
 
-    .staff-img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        border: 3px solid #f5f5f7; /* Çalışanın fotoğrafını öne çıkarır */
-        margin-bottom: 20px;
-    }
-</style>
+  <!-- Home Button (Top-Left) -->
+  <a class="home-btn" href="/" aria-label="Anasayfaya dön">← Anasayfa</a>
 
-<div class="content-area">
-    <img src="halis-profil.jpg" class="staff-img">
-    <h1>Halis [Soyadı]</h1>
-    <p>Gayrimenkul Yatırım Danışmanı</p>
-    
-    <a href="LINK" class="link-card">WhatsApp</a>
-    <a href="LINK" class="link-card">Katalog</a>
-</div>
+  <!-- Content -->
+  <main class="qr-shell">
+    <section class="qr-panel">
+      <header class="qr-header">
+        <!-- Kişi fotoğrafı -->
+        <img class="qr-avatar" src="/assets/team/ali.jpg" alt="Ali - Profil Fotoğrafı" />
+
+        <!-- Kişi adı / rol -->
+        <h1 class="qr-title">Ali Yılmaz</h1>
+        <p class="qr-subtitle">Satış Danışmanı • Yapımax</p>
+      </header>
+
+      <div class="qr-links">
+        <a class="qr-link" href="https://wa.me/90XXXXXXXXXX" target="_blank" rel="noopener">
+          <span>WhatsApp</span>
+          <small>Hızlı iletişim</small>
+        </a>
+
+        <a class="qr-link" href="https://seferkeremozmen.com/merhaba.html">
+          <span>Kurucu Hub</span>
+          <small>Merhaba sayfası</small>
+        </a>
+
+        <a class="qr-link" href="https://yapimax.com" target="_blank" rel="noopener">
+          <span>Kurumsal Site</span>
+          <small>Yapımax</small>
+        </a>
+
+        <a class="qr-link" href="/assets/katalog.pdf" download>
+          <span>Katalog</span>
+          <small>PDF indir</small>
+        </a>
+      </div>
+
+      <footer class="qr-footer">
+        Bu sayfa, <strong>Sefer Kerem Özmen</strong> tarafından kurulan sistemin bir parçasıdır.
+        Danışmanlar bu ekosistemin standartları ve güvencesi altında çalışır.
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
