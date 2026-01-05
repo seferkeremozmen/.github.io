@@ -1,9 +1,9 @@
 /* ===== QR Pages System Styles (Founder Watermark + UI) ===== */
 :root{
-  --wm-opacity: 0.10;           /* filigran şeffaflığı */
+  --wm-opacity: 0.08;           /* filigran şeffaflığı */
   --wm-size: clamp(520px, 70vw, 980px);
-  --wm-x: 55%;                  /* yatay hizalama */
-  --wm-y: 40%;                  /* dikey hizalama */
+  --wm-x: 60%;                  /* yatay hizalama */
+  --wm-y: 35%;                  /* dikey hizalama */
 
   --page-bg: #0b0f14;
   --panel-bg: rgba(0,0,0,.35);
