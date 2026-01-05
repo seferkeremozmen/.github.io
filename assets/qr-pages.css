@@ -30,7 +30,7 @@ body{
   z-index: -2;
   pointer-events: none;
 
-  background-image: url("/assets/founder.jpg");
+  background-image: url("/assets/kerem.jpg");
   background-repeat: no-repeat;
   background-position: var(--wm-x) var(--wm-y);
   background-size: var(--wm-size);
