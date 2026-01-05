@@ -84,7 +84,7 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-8">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <a href="#top" class="font-montserrat text-2xl tracking-tight">
+            <a href="#" id="homeBtn" class="font-serif text-2xl tracking-tight">
                 SEFER KEREM ÖZMEN
             </a>
 
@@ -353,5 +353,16 @@
             alert('Navigasyon Menüsü Yakında Aktif Olacak.');
         });
     </script>
+    <script>
+  document.getElementById("homeBtn").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+    
 </body>
 </html>
