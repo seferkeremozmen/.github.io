@@ -7,12 +7,71 @@
 
   <!-- Ortak QR stilleri -->
   <link rel="stylesheet" href="/assets/qr-pages.css?v=3" />
+
+  <!-- Sayfaya özel arka plan düzeni -->
+  <style>
+    /* Bu sayfada founder watermark’ı kapatıyoruz ki arka plan “çift kat” olmasın */
+    .founder-wm { display: none !important; }
+
+    /* Arka plan katmanı */
+    .profile-bg{
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      display: flex;
+      pointer-events: none;
+      background: #0b0b0b;
+    }
+
+    .profile-bg .half{
+      width: 50%;
+      height: 100%;
+      background-image: url("/assets/team/halis.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      /* Fotoğrafın hissi: daha “premium” arka plan */
+      filter: grayscale(100%) contrast(112%);
+      opacity: 0.22;
+      transform: scale(1.05);
+    }
+
+    /* Desktop: iki yarıda da fotoğraf var.
+       Yüz biraz yukarıda kalsın diye Y’yi üstten alıyoruz. */
+    .profile-bg .half.left  { background-position: center 18%; }
+    .profile-bg .half.right { background-position: center 18%; }
+
+    /* Üstüne hafif vignette / karartma */
+    .profile-vignette{
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.65) 70%, rgba(0,0,0,0.85) 100%);
+    }
+
+    /* Mobil: tek fotoğraf kalsın + yüz yukarı çıksın */
+    @media (max-width: 768px){
+      .profile-bg{ display: block; }
+      .profile-bg .half{ width: 100%; }
+      .profile-bg .half.right{ display: none; }
+
+      /* Mobilde yüzü daha görünür yapmak için daha yukarı al */
+      .profile-bg .half.left{ background-position: center 8%; }
+      .profile-bg .half.left{ opacity: 0.26; }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- Founder Watermark -->
-  <div class="founder-wm" aria-hidden="true"></div>
+  <!-- Yeni arka plan (desktop: 2 foto, mobil: 1 foto) -->
+  <div class="profile-bg" aria-hidden="true">
+    <div class="half left"></div>
+    <div class="half right"></div>
+  </div>
+  <div class="profile-vignette" aria-hidden="true"></div>
 
   <!-- Home button -->
   <a class="home-btn" href="/" aria-label="Anasayfaya dön">← Anasayfa</a>
@@ -33,7 +92,7 @@
       </header>
 
       <div class="qr-links">
-        <a class="qr-link" href="https://wa.me/90XXXXXXXXXX" target="_blank">
+        <a class="qr-link" href="https://wa.me/90XXXXXXXXXX" target="_blank" rel="noopener">
           <span>WhatsApp</span>
           <small>Hızlı iletişim</small>
         </a>
